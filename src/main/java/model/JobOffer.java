@@ -1,9 +1,17 @@
+package model;
+
+import lombok.Value;
+import model.helpers.AbstractEntity;
+
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
 import java.util.Date;
 import java.util.List;
-import java.util.concurrent.locks.Condition;
 
-public class JobOffer
+@Value
+public class JobOffer extends AbstractEntity
 {
+
     private String title;
     private String description;
     private String jobType;
@@ -11,6 +19,7 @@ public class JobOffer
     private List<String> benefitList;
     private Date offerDueDate;
     private Date jobStartDate;
-    private String localization;
+    @OneToOne
+    private Location localization;
     private List<String> jobConditions;
 }
