@@ -38,7 +38,3 @@ public class Employer extends AbstractEntity{
     }
 }
 
-/*
-
-nazwafirmy-adresemail-lokalizacjebiur/oddziałów-rozmiarfirmy(ilośćpracownikówogólnie,ilośćdeweloperów)-logo-zdjęciafirmy
- */
