@@ -2,6 +2,7 @@ package model;
 
 
 import model.helpers.AbstractEntity;
+import model.helpers.Picture;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
@@ -18,6 +19,7 @@ public class Applicant extends AbstractEntity {
     private String trainingsDesc;
     private int entireExperience;
     private int salaryExpectations;
+    private Picture picture;
 
     public Users getUser() {
         return user;
