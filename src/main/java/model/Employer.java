@@ -4,6 +4,8 @@ import model.helpers.AbstractEntity;
 import model.helpers.Picture;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import java.util.List;
 
 @Entity
@@ -16,6 +18,9 @@ public class Employer extends AbstractEntity{
     private Picture logo;
     private List<Picture> pictures;
 
+    @OneToMany
+    @JoinColumn(name="employer_id")
+    private List<JobOffer> jobOffers;
 
     public Employer(String companyName, String eMail, String location, int numberOfDevelopers, int numberOfEmploees, Picture logo, List<Picture> pictures) {
         this.companyName = companyName;

@@ -5,6 +5,7 @@ import model.helpers.AbstractEntity;
 import model.helpers.Picture;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -20,18 +21,20 @@ public class Applicant extends AbstractEntity {
     private int entireExperience;
     private int salaryExpectations;
     private Picture picture;
+    @OneToOne
+    @JoinColumn(name="user_id")
+    private Users user;
+
 
     public Users getUser() {
         return user;
     }
 
+
     public void setUser(Users user) {
         this.user = user;
     }
 
-    @OneToOne
-
-    private Users user;
 
     public Applicant() {
     }
@@ -106,6 +109,14 @@ public class Applicant extends AbstractEntity {
 
     public void setSalaryExpectations(int salaryExpectations) {
         this.salaryExpectations = salaryExpectations;
+    }
+
+    public Picture getPicture() {
+        return picture;
+    }
+
+    public void setPicture(Picture picture) {
+        this.picture = picture;
     }
 
     @Override

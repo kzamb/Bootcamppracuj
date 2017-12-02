@@ -1,54 +1,32 @@
 package model;
 
+import lombok.Value;
 import model.helpers.Status;
 
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import java.util.Date;
 
+@Value
 public class Application {
 
-    private Users user;
+    @OneToMany
+    @JoinColumn(name="jobOffer_id")
     private JobOffer jobOffer;
+    @OneToMany
+    @JoinColumn(name="applicant_id")
+    private Applicant applicant;
+
     private Date date;
     private Status status;
     private Date statusDate;
 
-    public Application(Users user, JobOffer jobOffer, Date date, Status status, Date statusDate) {
-        this.user = user;
+    public Application(JobOffer jobOffer, Applicant applicant, Date date, Status status, Date statusDate) {
         this.jobOffer = jobOffer;
+        this.applicant = applicant;
         this.date = date;
         this.status = status;
         this.statusDate = statusDate;
     }
 
-    public void setUser(Users user) {
-        this.user = user;
-    }
-
-    public void setJobOffer(JobOffer jobOffer) {
-        this.jobOffer = jobOffer;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public void setStatus(Status status) {
-        this.status = status;
-    }
-
-    public void setStatusDate(Date statusDate) {
-        this.statusDate = statusDate;
-    }
-
-
-    @Override
-    public String toString() {
-        return "Application{" +
-                "user=" + user +
-                ", jobOffer=" + jobOffer +
-                ", date=" + date +
-                ", status=" + status +
-                ", statusDate=" + statusDate +
-                '}';
-    }
 }
