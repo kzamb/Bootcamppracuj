@@ -14,8 +14,9 @@ public class JobOffer extends AbstractEntity
 
     private String title;
     private String description;
-    private String jobType;
+    private Employer employer;
     private String candidateRequirements;
+    private PayRange payRange;
     private List<String> benefitList;
     private Date offerDueDate;
     private Date jobStartDate;
