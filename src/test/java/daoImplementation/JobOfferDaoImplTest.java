@@ -13,9 +13,8 @@ public class JobOfferDaoImplTest
     {
         JobOffer jobOffer = new JobOffer();
         String title = "title";
-        JobOfferDaoImpl jobOfferDao = new JobOfferDaoImpl();
+        JobOfferDao jobOfferDao = new JobOfferDaoImpl();
         List<JobOffer> foundJobOfferList = jobOfferDao.findByTitle(title);
         assertThat(foundJobOfferList).contains(jobOffer);
     }
 }
-

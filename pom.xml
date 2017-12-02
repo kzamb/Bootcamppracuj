@@ -15,6 +15,9 @@
         <version.hibiernate>5.2.11.Final</version.hibiernate>
         <version.postgres-driver>42.1.4</version.postgres-driver>
         <spring.version>4.3.13.RELEASE</spring.version>
+        <springboot.version>1.5.9.RELEASE</springboot.version>
+        <springdata.version>1.11.8.RELEASE</springdata.version>
+        <hsql.version>2.3.1</hsql.version>
     </properties>
 
     <dependencies>
@@ -30,24 +33,14 @@
             <version>${version.postgres-driver}</version>
         </dependency>
 
-        <!--spring-->
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+
+        <!--lombok-->
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>${spring.version}</version>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.18</version>
+            <scope>provided</scope>
         </dependency>
 
 
@@ -58,6 +51,11 @@
             <artifactId>assertj-core</artifactId>
             <version>3.8.0</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>RELEASE</version>
         </dependency>
 
 
