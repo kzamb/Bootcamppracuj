@@ -2,17 +2,19 @@ package model;
 
 import model.helpers.Status;
 import model.helpers.AbstractEntity;
+
+import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import java.util.Date;
 
+@Entity
 public class Application extends AbstractEntity{
 
-    @OneToMany
-    @JoinColumn(name="jobOffer_id")
+    @OneToOne
     private JobOffer jobOffer;
-    @OneToMany
-    @JoinColumn(name="applicant_id")
+    @OneToOne
     private Applicant applicant;
 
     private Date date;

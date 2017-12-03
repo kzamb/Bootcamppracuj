@@ -1,7 +1,6 @@
 package model.helpers;
 
 import lombok.Data;
-
 import javax.persistence.*;
 
 @Data
