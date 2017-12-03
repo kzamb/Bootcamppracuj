@@ -1,11 +1,9 @@
 package pl.sages.controllers
 
-import org.junit.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.web.client.RestTemplate
 import pl.sages.dao.UserDao
-import pl.sages.model.JobOffer
 import pl.sages.model.User
 import spock.lang.Shared
 import spock.lang.Specification

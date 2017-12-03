@@ -21,7 +21,7 @@ public class UserController
     private UserDao userDao;
 
     @RequestMapping(value = USER_BASE_URL, method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public @ResponseBody List<User> getUsers() {
+    public List<User> getUsers() {
         return userDao.findAll();
     }
 }
