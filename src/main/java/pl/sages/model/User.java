@@ -1,8 +1,8 @@
-package model;
+package pl.sages.model;
 
 import lombok.Data;
-import model.helpers.AbstractEntity;
-import model.helpers.Role;
+import pl.sages.model.helpers.AbstractEntity;
+import pl.sages.model.helpers.Role;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
