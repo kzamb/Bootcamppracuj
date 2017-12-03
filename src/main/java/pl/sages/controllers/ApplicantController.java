@@ -21,8 +21,7 @@ public class ApplicantController {
     private ApplicantDao applicantDao;
 
     @RequestMapping(value = APPLICANT_BASE_URL, method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public @ResponseBody
-    List<Applicant> getApplicant() {
+    public List<Applicant> getApplicant() {
         return applicantDao.findAll();
     }
 }
