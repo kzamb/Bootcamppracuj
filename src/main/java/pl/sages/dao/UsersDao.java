@@ -1,12 +1,11 @@
-package dao;
+package pl.sages.dao;
 
-import model.Users;
+import org.springframework.stereotype.Repository;
+import pl.sages.model.User;
 
-import java.util.List;
+@Repository
+public interface UsersDao extends AbstractDao<User> {
 
-public interface UsersDao {
-
-    Users findUser (String email);
-    List<Users> findAll ();
+  User findUserByEmail(String email);
 
 }

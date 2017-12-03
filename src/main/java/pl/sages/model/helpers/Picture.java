@@ -1,11 +1,12 @@
-package model.helpers;
+package pl.sages.model.helpers;
 
 import lombok.Data;
+
 import javax.persistence.Entity;
 
 @Data
 @Entity
-public class Picture extends AbstractEntity{
-    private String name;
+public class Picture extends AbstractEntity {
+  private String name;
 
 }

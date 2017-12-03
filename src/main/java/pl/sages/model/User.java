@@ -10,8 +10,8 @@ import javax.persistence.Table;
 @Data
 @Entity
 @Table(name = "users")
-public class Users extends AbstractEntity {
-    private String email;
-    private String password;
-    private Role roles;
+public class User extends AbstractEntity {
+  private String email;
+  private String password;
+  private Role roles;
 }

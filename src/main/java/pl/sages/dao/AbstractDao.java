@@ -1,10 +1,10 @@
-package dao;
+package pl.sages.dao;
 
-import model.helpers.AbstractEntity;
+import pl.sages.model.helpers.AbstractEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  * Created by greg on 03/12/17
  */
-public interface AbstractDao<T extends AbstractEntity> extends JpaRepository<T, Long>{
+public interface AbstractDao<T extends AbstractEntity> extends JpaRepository<T, Long> {
 }

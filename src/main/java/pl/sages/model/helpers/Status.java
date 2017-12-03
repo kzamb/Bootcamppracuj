@@ -1,5 +1,5 @@
-package model.helpers;
+package pl.sages.model.helpers;
 
 public enum Status {
-    NEW, RECIEVED, ACCEPTED, REJECTED, CLOSED;
+  NEW, RECIEVED, ACCEPTED, REJECTED, CLOSED;
 }

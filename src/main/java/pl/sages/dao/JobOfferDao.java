@@ -1,17 +1,20 @@
-package dao;
+package pl.sages.dao;
 
-import model.Employer;
-import model.JobOffer;
-import model.Location;
-import model.PayRange;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import pl.sages.model.Employer;
+import pl.sages.model.JobOffer;
+import pl.sages.model.Location;
+import pl.sages.model.PayRange;
 
 import java.util.List;
 
-public interface JobOfferDao extends AbstractDao<JobOffer>
-{
-    List<JobOffer> findByTitle(String title);
-    List<JobOffer> findByEmployer(Employer employer);
-    List<JobOffer> findByPayRange(PayRange payRange);
-    List<JobOffer> findByLocalization(Location localization);
+@Repository
+public interface JobOfferDao extends AbstractDao<JobOffer> {
+  List<JobOffer> findByTitle(String title);
+
+  List<JobOffer> findByEmployer(Employer employer);
+
+  List<JobOffer> findByPayRange(PayRange payRange);
+
+  List<JobOffer> findByLocalization(Location localization);
 }

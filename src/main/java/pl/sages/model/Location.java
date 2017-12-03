@@ -1,7 +1,7 @@
-package model;
+package pl.sages.model;
 
 import lombok.Data;
-import model.helpers.AbstractEntity;
+import pl.sages.model.helpers.AbstractEntity;
 
 import javax.persistence.Entity;
 
@@ -9,7 +9,7 @@ import javax.persistence.Entity;
 @Entity
 public class Location extends AbstractEntity {
 
-    private String text;
-    private double longitude;
-    private double latitude;
+  private String text;
+  private double longitude;
+  private double latitude;
 }

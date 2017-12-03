@@ -1,13 +1,13 @@
-package model;
+package pl.sages.model;
 
 import lombok.Data;
-import model.helpers.AbstractEntity;
+import pl.sages.model.helpers.AbstractEntity;
 
 import javax.persistence.Entity;
 
 @Entity
 @Data
 public class PayRange extends AbstractEntity {
-    int lowValue;
-    int highValue;
+  int lowValue;
+  int highValue;
 }
