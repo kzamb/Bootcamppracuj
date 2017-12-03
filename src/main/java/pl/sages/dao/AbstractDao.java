@@ -1,10 +1,12 @@
 package pl.sages.dao;
 
+import org.springframework.stereotype.Repository;
 import pl.sages.model.helpers.AbstractEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  * Created by greg on 03/12/17
  */
+@Repository
 public interface AbstractDao<T extends AbstractEntity> extends JpaRepository<T, Long> {
 }
