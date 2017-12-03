@@ -1,14 +1,15 @@
 package pl.sages.model;
 
-import lombok.Data;
+import lombok.*;
 import pl.sages.model.helpers.AbstractEntity;
 
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
-@Data
+@Getter
 @Entity
+@Data
 public class JobOffer extends AbstractEntity {
   private String title;
   private String description;

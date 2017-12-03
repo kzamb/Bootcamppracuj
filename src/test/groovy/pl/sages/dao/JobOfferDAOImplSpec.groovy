@@ -23,9 +23,8 @@ class JobOfferDAOImplSpec extends Specification {
 
     given:
     // stworzenie obiektu i zapis
-    JobOffer jobOffer = new JobOffer()
+    JobOffer jobOffer = new JobOffer();
     jobOffer.setTitle("abc")
-    println(jobOffer.title)
     println(jobOffer)
     dao.save(jobOffer)
 
@@ -35,6 +34,7 @@ class JobOfferDAOImplSpec extends Specification {
 
     then:
     // sprawdzenie niezbylt dobre poprzez .contains
-    foundJobOfferList.contains(jobOffer)
+    foundJobOfferList.size() == 1
+    foundJobOfferList.every({ it.title == "abc" })
   }
 }
