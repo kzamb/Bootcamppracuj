@@ -1,14 +1,10 @@
 package model;
 
-
 import model.helpers.AbstractEntity;
 import model.helpers.Picture;
-
-import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
-@Entity
 public class Applicant extends AbstractEntity {
 
     private String firstName;
@@ -22,115 +18,8 @@ public class Applicant extends AbstractEntity {
     private int salaryExpectations;
     private Picture picture;
     @OneToOne
-    @JoinColumn(name="user_id")
+    @JoinColumn (name="user_id")
     private Users user;
-
-
-    public Users getUser() {
-        return user;
-    }
-
-
-    public void setUser(Users user) {
-        this.user = user;
-    }
-
-
     public Applicant() {
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getHighestEducationLevel() {
-        return highestEducationLevel;
-    }
-
-    public void setHighestEducationLevel(String highestEducationLevel) {
-        this.highestEducationLevel = highestEducationLevel;
-    }
-
-    public String getCertificationsDesc() {
-        return certificationsDesc;
-    }
-
-    public void setCertificationsDesc(String certificationsDesc) {
-        this.certificationsDesc = certificationsDesc;
-    }
-
-    public String getTrainingsDesc() {
-        return trainingsDesc;
-    }
-
-    public void setTrainingsDesc(String trainingsDesc) {
-        this.trainingsDesc = trainingsDesc;
-    }
-
-    public int getEntireExperience() {
-        return entireExperience;
-    }
-
-    public void setEntireExperience(int entireExperience) {
-        this.entireExperience = entireExperience;
-    }
-
-    public int getSalaryExpectations() {
-        return salaryExpectations;
-    }
-
-    public void setSalaryExpectations(int salaryExpectations) {
-        this.salaryExpectations = salaryExpectations;
-    }
-
-    public Picture getPicture() {
-        return picture;
-    }
-
-    public void setPicture(Picture picture) {
-        this.picture = picture;
-    }
-
-    @Override
-    public String toString() {
-        return "Applicant{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", highestEducationLevel='" + highestEducationLevel + '\'' +
-                ", certificationsDesc='" + certificationsDesc + '\'' +
-                ", trainingsDesc='" + trainingsDesc + '\'' +
-                ", entireExperience=" + entireExperience +
-                ", salaryExpectations=" + salaryExpectations +
-                '}';
     }
 }
