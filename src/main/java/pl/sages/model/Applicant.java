@@ -2,7 +2,6 @@ package pl.sages.model;
 
 import lombok.Data;
 import pl.sages.model.helpers.AbstractEntity;
-import pl.sages.model.helpers.Picture;
 
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
