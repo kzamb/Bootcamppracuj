@@ -27,9 +27,13 @@ public class ApplicantController {
         return applicantDao.findAll();
     }
 
-    @RequestMapping(value = "/jobOffer/{jobOfferId:.+}/applicant/{applicantId:.+}")
-    public String createNewApplication (Model model, @PathVariable ("jobOfferId") Long jobOfferId, @PathVariable ("applicantId") Long applicantId)
+    @RequestMapping(value = "/jobOffer/{jobOfferId}/applicant/{applicantId}", method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public String createNewApplication (Model model,
+                                        @PathVariable ("jobOfferId") Long jobOfferId,
+                                        @PathVariable ("applicantId") Long applicantId)
     {
         pracujPlService.createNewApplication(applicantId,jobOfferId);
+        return "udalo sie";
     }
 }
