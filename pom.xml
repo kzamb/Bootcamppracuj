@@ -15,7 +15,7 @@
 
     <version.springboot>1.5.9.RELEASE</version.springboot>
     <version.spock>1.1-groovy-2.4</version.spock>
-    <version.postgresql>42.1.4</version.postgresql>
+    <version.postgresql>42.4.1</version.postgresql>
   </properties>
 
   <dependencies>
